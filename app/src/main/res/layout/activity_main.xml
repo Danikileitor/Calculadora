@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btnDivision"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="88dp"
+        android:text="@string/btnDivision"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/btnProducto"
+        app:layout_constraintTop_toBottomOf="@+id/lbOperando2" />
+
     <TextView
         android:id="@+id/lbOperando1"
         android:layout_width="wrap_content"
@@ -34,6 +45,7 @@
         android:id="@+id/txtOperando1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/txtOperando1"
         android:inputType="numberDecimal"
@@ -44,13 +56,13 @@
         app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toEndOf="@+id/lbOperando1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.089999974"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.089999974" />
 
     <EditText
         android:id="@+id/txtOperando2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/txtOperando2"
         android:inputType="numberDecimal"
@@ -61,8 +73,7 @@
         app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toEndOf="@+id/lbOperando2"
         app:layout_constraintTop_toBottomOf="@+id/txtOperando1"
-        app:layout_constraintVertical_bias="0.060000002"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.060000002" />
 
     <TextView
         android:id="@+id/lbResultado"
@@ -71,7 +82,52 @@
         android:text="@string/lbResultado"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtOperando2" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLimpiar"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btnSuma"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="88dp"
+        android:text="@string/btnSuma"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbOperando2" />
+
+    <Button
+        android:id="@+id/btnResta"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="88dp"
+        android:text="@string/btnResta"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/btnSuma"
+        app:layout_constraintTop_toBottomOf="@+id/lbOperando2" />
+
+    <Button
+        android:id="@+id/btnProducto"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="88dp"
+        android:text="@string/btnProducto"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/btnResta"
+        app:layout_constraintTop_toBottomOf="@+id/lbOperando2" />
+
+    <Button
+        android:id="@+id/btnLimpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/btnLimpiar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSuma" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
