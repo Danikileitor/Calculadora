@@ -10,10 +10,11 @@
         android:id="@+id/btnDivision"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="88dp"
         android:text="@string/btnDivision"
         android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnProducto"
         app:layout_constraintTop_toBottomOf="@+id/lbOperando2" />
 
@@ -91,10 +92,11 @@
         android:id="@+id/btnSuma"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="88dp"
         android:text="@string/btnSuma"
         android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/btnResta"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbOperando2" />
 
@@ -102,10 +104,11 @@
         android:id="@+id/btnResta"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="88dp"
         android:text="@string/btnResta"
         android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/btnProducto"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnSuma"
         app:layout_constraintTop_toBottomOf="@+id/lbOperando2" />
 
@@ -113,10 +116,11 @@
         android:id="@+id/btnProducto"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="88dp"
         android:text="@string/btnProducto"
         android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/btnDivision"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnResta"
         app:layout_constraintTop_toBottomOf="@+id/lbOperando2" />
 
