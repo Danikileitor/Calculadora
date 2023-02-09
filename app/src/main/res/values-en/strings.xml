@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Calculadora</string>
-    <string name="lbOperando1">Operando 1:</string>
-    <string name="lbOperando2">Operando 2:</string>
+    <string name="app_name">Calculator</string>
+    <string name="lbOperando1">Operator 1:</string>
+    <string name="lbOperando2">Operator 2:</string>
     <string name="txtOperando1">12</string>
     <string name="txtOperando2">4</string>
     <string name="lbResultado">0</string>
-    <string name="lbResultadoError">¡No se puede dividir por 0!</string>
+    <string name="lbResultadoError">You cannot divide by 0!</string>
     <string name="btnSuma">+</string>
     <string name="btnResta">-</string>
     <string name="btnProducto">*</string>
     <string name="btnDivision">/</string>
-    <string name="btnLimpiar">Limpiar datos</string>
+    <string name="btnLimpiar">Clear fields</string>
 </resources>
