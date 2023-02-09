@@ -6,18 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnDivision"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="88dp"
-        android:text="@string/btnDivision"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnProducto"
-        app:layout_constraintTop_toBottomOf="@+id/lbOperando2" />
-
     <TextView
         android:id="@+id/lbOperando1"
         android:layout_width="wrap_content"
@@ -49,7 +37,7 @@
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/txtOperando1"
-        android:inputType="numberDecimal"
+        android:inputType="number"
         android:minHeight="48dp"
         android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,7 +54,7 @@
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/txtOperando2"
-        android:inputType="numberDecimal"
+        android:inputType="number"
         android:minHeight="48dp"
         android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -76,18 +64,6 @@
         app:layout_constraintTop_toBottomOf="@+id/txtOperando1"
         app:layout_constraintVertical_bias="0.060000002" />
 
-    <TextView
-        android:id="@+id/lbResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lbResultado"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLimpiar"
-        app:layout_constraintVertical_bias="0.5" />
-
     <Button
         android:id="@+id/btnSuma"
         android:layout_width="50dp"
@@ -95,6 +71,7 @@
         android:layout_marginTop="88dp"
         android:text="@string/btnSuma"
         android:textAlignment="center"
+        android:onClick="sumar"
         app:layout_constraintEnd_toStartOf="@+id/btnResta"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,6 +84,7 @@
         android:layout_marginTop="88dp"
         android:text="@string/btnResta"
         android:textAlignment="center"
+        android:onClick="restar"
         app:layout_constraintEnd_toStartOf="@+id/btnProducto"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnSuma"
@@ -119,9 +97,23 @@
         android:layout_marginTop="88dp"
         android:text="@string/btnProducto"
         android:textAlignment="center"
+        android:onClick="multiplicar"
         app:layout_constraintEnd_toStartOf="@+id/btnDivision"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnResta"
+        app:layout_constraintTop_toBottomOf="@+id/lbOperando2" />
+
+    <Button
+        android:id="@+id/btnDivision"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="88dp"
+        android:text="@string/btnDivision"
+        android:textAlignment="center"
+        android:onClick="dividir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnProducto"
         app:layout_constraintTop_toBottomOf="@+id/lbOperando2" />
 
     <Button
@@ -130,8 +122,25 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:text="@string/btnLimpiar"
+        android:textAlignment="center"
+        android:onClick="limpiar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSuma" />
+
+    <TextView
+        android:id="@+id/lbResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:text="@string/lbResultado"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLimpiar"
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
